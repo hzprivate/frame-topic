@@ -8,3 +8,4 @@
 6.beanNameGenerator  自定义 spring bean name生成策略
 7.@Scope 作用域
 8.在单例中引用了多例对象  @Lookup  
+9.excludeFilters  包扫描过滤
