@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.hz.dao.UserDaoImpl"></bean>
+    <bean id="userService" class="com.hz.service.UserServiceImpl">
+        <!--property setter注入  name 是传入的userDao 变量名称 ref是 属性方法setUserDao名称-->
+        <!--<property name="userDao" ref="userDao"></property>-->
+
+        <!--constructor-arg 构造器注入-->
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+</beans>
