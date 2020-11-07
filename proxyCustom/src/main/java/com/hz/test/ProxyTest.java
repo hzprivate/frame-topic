@@ -6,6 +6,7 @@ import com.hz.invocationHandler.MyProxyInvocationHandler;
 import java.lang.reflect.Proxy;
 
 /**
+ * jdk动态代理测试
  * @author hz
  * @Description:
  * @create 2020-09-19
