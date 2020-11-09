@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-autowire="byName">
+
+
+	<!--可以通过构造注入 也可以通过 autowire 自动装配注入-->
+	<bean id="queryDao"  name="aaa" class="com.hz.dao.QueryDao" autowire="byName">
+		<!--<constructor-arg ref="teacher"></constructor-arg>-->
+		<!--<constructor-arg type="int" value="20"></constructor-arg>-->
+	</bean>
+
+	<!--通过 aaa , bbb, queryDao 都可获得bean对象 -->
+	<alias name="aaa" alias="bbb"/>
+
+	<!--静态工厂方法 创建bean对象-->
+	<bean id="teacher"
+		  class="com.hz.bean.Teacher"
+		  factory-method="createInstance"/>
+
+
+	<!--实例化工厂方法 从容器中调用现有bean的非静态方法来创建新bean-->
+	<bean id="water" class="com.hz.bean.Water"></bean>
+	<bean id="book"
+		  factory-bean="water"
+		  factory-method="getInstanceBook"/>
+
+	<!--循环依赖引用  stuent - sillyB  互相set注入  构造注入会循环引用报错-->
+	<bean id="sillyB" class="com.hz.bean.SillyB">
+		<property name="student" ref="student"></property>
+	</bean>
+
+
+	<bean id="student" class="com.hz.bean.Student">
+		<!--name属性对应 set方法名 setAAAB  不是类名首字母大写 一般默认按首字母大写-->
+		<property name="AAAB" ref="sillyB"></property>
+	</bean>
+
+
+</beans>
