@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mySpring</groupId>
-  <artifactId>MyspringFramework</artifactId>
+  <artifactId>mySpringFramework</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -24,7 +24,8 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
+      <!--只能在 test目录（通过右键->Make Directory as->Test Sources Root来标记）下的类中导入-->
+      <!--<scope>test</scope>-->
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
