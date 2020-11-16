@@ -1,4 +1,4 @@
-package com.hz.singleTon;
+package com.hz.singleTon.singleTon;
 
 /**
  *测试 五种单例模式
@@ -7,7 +7,7 @@ package com.hz.singleTon;
  * @create 2020-10-10
  */
 public class SingleTonLazyThreadSafe {
-	private static  SingleTonLazyThreadSafe singleTon =null;
+	private static SingleTonLazyThreadSafe singleTon =null;
 
 	private SingleTonLazyThreadSafe() {
 	}

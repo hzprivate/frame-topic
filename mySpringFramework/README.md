@@ -17,3 +17,11 @@
 - org.springframework.beans.factory.FactoryBean 接口
 - 在容器上调用getBean(“myBean”)将返回FactoryBean的产品，
 而调用getBean(“&myBean”)将返回FactoryBean实例本身。
+10. spring 扩展点之一 ：BeanFactoryPostProcessor后置处理器 ，可插手bean定义   BeanDefinitionRegistryPostProcessor（实现了BeanFactoryPostProcessor）可人为注册bd到容器
+11. spring扩展点之一： BeanPostProcessor后置处理器  会对实例化对象前后分别调用方法
+12. Import注解的作用:
+    - 声明一个bean
+    - 导入@Configuration注解的配置类
+    - 导入ImportSelector的实现类 （返回全限定类名 赋值到 bd.beanClassName中）
+    - 导入ImportBeanDefinitionRegistrar的实现类 (应用 @MapperScan)
+    

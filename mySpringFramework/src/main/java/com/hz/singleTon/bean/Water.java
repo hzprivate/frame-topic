@@ -1,6 +1,4 @@
-package com.hz.bean;
-
-import org.springframework.stereotype.Component;
+package com.hz.singleTon.bean;
 
 /**
  * @author hz

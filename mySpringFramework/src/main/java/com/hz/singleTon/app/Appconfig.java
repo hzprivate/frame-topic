@@ -1,7 +1,7 @@
-package com.hz.app;
+package com.hz.singleTon.app;
 
-import com.hz.bean.MyImportSelector;
-import com.hz.bean.Student;
+import com.hz.singleTon.bean.MyImportSelector;
+import com.hz.singleTon.bean.Student;
 import org.springframework.context.annotation.*;
 
 /**

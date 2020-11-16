@@ -1,11 +1,9 @@
-package com.hz.test;
+package com.hz.singleTon.test;
 
-import com.hz.app.Appconfig;
-import com.hz.bean.Book;
-import com.hz.bean.ChangeBeanDefinition;
-import com.hz.bean.RegistBeanDefinition;
-import com.hz.bean.SimpleMovieLister;
-import com.hz.factory.MyBeanFactoryPostProcessor;
+import com.hz.singleTon.app.Appconfig;
+import com.hz.singleTon.bean.ChangeBeanDefinition;
+import com.hz.singleTon.bean.RegistBeanDefinition;
+import com.hz.singleTon.factory.MyBeanFactoryPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

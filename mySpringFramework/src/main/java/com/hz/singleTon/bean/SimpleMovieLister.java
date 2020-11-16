@@ -1,6 +1,5 @@
-package com.hz.bean;
+package com.hz.singleTon.bean;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**

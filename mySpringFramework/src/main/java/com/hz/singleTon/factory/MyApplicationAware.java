@@ -1,7 +1,5 @@
-package com.hz.factory;
+package com.hz.singleTon.factory;
 
-import com.hz.bean.PrototypeBeanTest;
-import com.hz.bean.SingleTonBeanTest;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

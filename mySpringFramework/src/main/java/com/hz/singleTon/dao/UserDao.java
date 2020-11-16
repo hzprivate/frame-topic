@@ -1,7 +1,6 @@
-package com.hz.dao;
+package com.hz.singleTon.dao;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author hz

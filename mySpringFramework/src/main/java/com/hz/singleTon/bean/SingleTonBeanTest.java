@@ -1,6 +1,6 @@
-package com.hz.bean;
+package com.hz.singleTon.bean;
 
-import com.hz.factory.MyApplicationAware;
+import com.hz.singleTon.factory.MyApplicationAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.hz.singleTon;
+package com.hz.singleTon.singleTon;
 
 /**
  *测试 五种单例模式
@@ -10,7 +10,7 @@ public class SingleTonLazyDoubleCheck {
 	private volatile static SingleTonLazyDoubleCheck singleTon =null;
 	private SingleTonLazyDoubleCheck() {
 	}
-	public static  SingleTonLazyDoubleCheck getInstance(){
+	public static SingleTonLazyDoubleCheck getInstance(){
 		if(singleTon == null){
 			synchronized (SingleTonLazyDoubleCheck.class){
 				if(singleTon == null){
