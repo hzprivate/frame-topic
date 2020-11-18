@@ -24,19 +24,19 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.springframework</groupId>-->
-      <!--<artifactId>spring-context</artifactId>-->
-      <!--<version>5.2.10.RELEASE</version>-->
-    <!--</dependency>-->
 
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.3.14.RELEASE</version>
+      <version>5.2.10.RELEASE</version>
     </dependency>
+
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-context</artifactId>-->
+      <!--<version>4.3.14.RELEASE</version>-->
+    <!--</dependency>-->
 
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
@@ -67,11 +67,13 @@
       <version>2.0.3</version>
     </dependency>
 
-    <!--<dependency>-->
-    <!--<groupId>org.slf4j</groupId>-->
-    <!--<artifactId>slf4j-jdk14</artifactId>-->
-    <!--<version>1.7.25</version>-->
-    <!--</dependency>-->
+
+    <!--slf4j log4j绑定器-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
 
 
   </dependencies>

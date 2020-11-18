@@ -1,13 +1,12 @@
 package com.hz;
 
 import com.hz.app.Appconfig;
-import com.hz.dao.UserDao;
 import com.hz.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-//import com.hz.service.UserService;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * @author hz
@@ -22,10 +21,10 @@ public class test {
         UserService userService = (UserService) context.getBean("userService");
         List<Map> list = userService.getList();
         List<Map> list1 = userService.getList();
-//        UserDao userDao = (UserDao) context.getBean("userDao");
-//        UserDao userDao1 = (UserDao) context.getBean("userDao");
 
+        System.out.println("打印结果："+list);
 
     }
+
 
 }
