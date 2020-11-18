@@ -6,7 +6,12 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * spring中含有 spring-jcl  重写了 commons-logging jcl包。
+ * spring5 日志新特性
+ * spring5 中含有 spring-jcl  重写了 commons-logging jcl包。
+ * <p>spring5 和spring4 （不借用任何日志实现情况下 都是用 jul
+ * 测试时发现，spring4启动 项目 ，会打印如下一行：
+ * 十一月 18, 2020 5:00:55 下午  org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh ...
+ * 而spring5 则不会打印   通过源码发现，jul  打印如下消息日志级别不同。 并不是因为使用了其他日志实现</p>
  * 源码内部通过 如下 switch case 获取 对应的日志实现
  *  switch(logApi) {
  *         case LOG4J:
