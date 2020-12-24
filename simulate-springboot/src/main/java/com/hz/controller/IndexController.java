@@ -12,8 +12,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
     @RequestMapping("/index")
-
     public String index(){
+        return "index";
+    }
+
+    @RequestMapping("/print")
+    @ResponseBody
+    public String print(){
         return "index";
     }
 }

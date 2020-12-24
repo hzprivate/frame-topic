@@ -18,17 +18,19 @@ import java.util.Set;
  * @Description:
  * @create 2020-12-24
  */
-@HandlesTypes({WebApplicationInitializer.class})
 public class MyWebApplicationInitializer implements ServletContainerInitializer {
     @Override
     public void onStartup(Set<Class<?>> c, ServletContext ctx) throws ServletException {
         System.out.println("=================");
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(AppConfig.class);
-        context.refresh();
-        DispatcherServlet servlet = new DispatcherServlet(context);
-        ServletRegistration.Dynamic registration = ctx.addServlet("app", servlet);
-        registration.setLoadOnStartup(1);
+////        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+////        context.register(AppConfig.class);
+////        context.refresh();
+//        DispatcherServlet servlet = new DispatcherServlet(ctx);
+//        ServletRegistration.Dynamic registration = ctx.addServlet("app", new MybootServlet());
+//        registration.setLoadOnStartup(1);
+//        registration.addMapping("/");
+
+        ServletRegistration.Dynamic registration = ctx.addServlet("mybootServlet", new MybootServlet());
         registration.addMapping("/");
     }
 }
