@@ -15,10 +15,4 @@ public class IndexController {
     public String index(){
         return "index";
     }
-
-    @RequestMapping("/print")
-    @ResponseBody
-    public String print(){
-        return "index";
-    }
 }
