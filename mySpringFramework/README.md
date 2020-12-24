@@ -7,7 +7,7 @@
 3. xml中 实例化工厂方法 从容器中调用现有bean的非静态方法来创建新bean
 4. 互相循环依赖引用  stuent - sillyB  互相set注入  构造注入会循环引用报错
 5. 在单例中引用了多例对象  
-    - 5.1 @Lookup 查询方法 指定属性get方法
+    - 5.1 @Lookup 查询方法 指定属性get方法 return null即可
     - 5.2 放弃一部分控制反转，通过实现ApplicationContextAware接口，传递应用上下文对象，然后在bean对象方法中引用上下文对象，为属性赋值。无法通过set或构造注入
 
 6. DefaultListableBeanFactory bean对象工厂 源码解析

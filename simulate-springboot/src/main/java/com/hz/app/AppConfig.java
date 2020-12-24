@@ -13,6 +13,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @ComponentScan("com.hz")
 public class AppConfig {
+
+    /**
+     * 视图解析器
+     * @return
+     */
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver("/",".jsp");
