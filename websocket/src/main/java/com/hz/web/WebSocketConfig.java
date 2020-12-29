@@ -12,9 +12,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
-		//订阅
+		//发布给前端订阅该主题得
 		config.enableSimpleBroker("/topic");
-		//发布
+		//订阅前端传来得消息
 		config.setApplicationDestinationPrefixes("/app");
 	}
 
