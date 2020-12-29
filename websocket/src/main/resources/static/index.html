@@ -1,0 +1,39 @@
+<html>
+<meta charset="utf-8">
+<head>
+    <title>Hello WebSocket</title>
+    <script src="/webjars/jquery/3.1.1-1/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" id="test" value="默认">
+    <input type="submit" value="connect按钮">
+    <input type="submit" value="send" onclick="sendName()">
+    <h2>Hello World!</h2>
+
+</div>
+</body>
+<script>
+    //自动连接
+    $(function () {
+        connect();
+    });
+
+    function connect() {
+        var socket = new SockJS('/gs-guide-websocket');
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/topic/greetings', function (greeting) {
+                $("#test").val(JSON.parse(greeting.body).data)
+            });
+        });
+    }
+
+    function sendName() {
+        stompClient.send("/app/hello", {}, "my name is hz");
+    }
+</script>
+</html>
