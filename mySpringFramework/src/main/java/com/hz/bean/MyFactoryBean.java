@@ -1,6 +1,6 @@
 package com.hz.service;
 
-import com.hz.entity.User;
+import com.hz.bean.User;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;
 
