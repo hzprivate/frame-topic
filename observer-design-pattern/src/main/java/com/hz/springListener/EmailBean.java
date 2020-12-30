@@ -15,6 +15,7 @@ public class EmailBean {
     ApplicationContext applicationContext;
     private String content;
     public void sendEmail(){
+        applicationContext.publishEvent(new SpringEmailEvent(applicationContext));
     }
 
     public String getContent() {
