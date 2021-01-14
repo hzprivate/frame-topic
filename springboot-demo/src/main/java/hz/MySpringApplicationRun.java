@@ -2,7 +2,6 @@ package hz;
 
 import com.hz.interf.EnableRedis;
 import com.hz.redis.RedisClient;
-import hz.config.AppConfig;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.PropertySource;
