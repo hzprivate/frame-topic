@@ -22,8 +22,6 @@ public class HumanBeanPropertiesRegistrar implements ImportBeanDefinitionRegistr
         this.getTypes(metadata).forEach(myclass->{
             GenericBeanDefinition bd = new GenericBeanDefinition();
             ((GenericBeanDefinition) bd).setBeanClass(myclass);
-            //代码注释。会报ClassNotFoundException: HumanBean
-//            bd.setBeanClassName(myclass.getSimpleName());
             registry.registerBeanDefinition(myclass.getSimpleName(),bd);
         });
     }

@@ -7,7 +7,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Description:
  * @create 2021-01-12
  */
-@ConfigurationProperties(prefix = "test")
+//@ConfigurationProperties(prefix = "test")
+//上面注解  可被 HumanBeanPostProcessor替代
 public class HumanBean {
     private String name;
     private int age;
