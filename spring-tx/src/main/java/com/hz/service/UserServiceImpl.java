@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
             logger.error("sql异常",e);
         }
 
-        Map map = new HashMap();
+        Map map = new HashMap(16);
         map.put("code","9999");
         map.put("msg","操作失败");
         return  map;

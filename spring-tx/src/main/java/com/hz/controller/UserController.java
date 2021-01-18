@@ -17,7 +17,8 @@ public class UserController {
     @Autowired
     private UserService userService;
     @RequestMapping("/insertUser")
-    public Map getUserInfo(){
+    public Map insertUserInfo(){
         return userService.insertUserInfo();
     }
+
 }
