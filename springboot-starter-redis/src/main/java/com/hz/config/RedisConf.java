@@ -6,33 +6,33 @@ package com.hz.config;
  */
 public class RedisConf {
 
-    private String redis_ip;
+    private String ip;
 
-    private int redis_port;
+    private int port;
 
-    private int redis_num;
+    private int num;
 
-    public String getRedis_ip() {
-        return redis_ip;
+    public String getIp() {
+        return ip;
     }
 
-    public void setRedis_ip(String redis_ip) {
-        this.redis_ip = redis_ip;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
-    public int getRedis_port() {
-        return redis_port;
+    public int getPort() {
+        return port;
     }
 
-    public void setRedis_port(int redis_port) {
-        this.redis_port = redis_port;
+    public void setPort(int port) {
+        this.port = port;
     }
 
-    public int getRedis_num() {
-        return redis_num;
+    public int getNum() {
+        return num;
     }
 
-    public void setRedis_num(int redis_num) {
-        this.redis_num = redis_num;
+    public void setNum(int num) {
+        this.num = num;
     }
 }

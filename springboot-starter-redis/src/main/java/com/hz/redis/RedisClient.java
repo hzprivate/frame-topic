@@ -33,7 +33,7 @@ public class RedisClient {
             config.setMinEvictableIdleTimeMillis(60000L);
             config.setTimeBetweenEvictionRunsMillis(3000L);
             config.setNumTestsPerEvictionRun(-1);
-            jedisPool = new JedisPool(config, redisconf.getRedis_ip(), redisconf.getRedis_port(), 60000);
+            jedisPool = new JedisPool(config, redisconf.getIp(), redisconf.getPort(), 60000);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -61,7 +61,7 @@ public class RedisClient {
         try {
             if (jedisPool != null) {
                 jedis = jedisPool.getResource();
-                jedis.select(redisconf.getRedis_num());
+                jedis.select(redisconf.getNum());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,7 +95,7 @@ public class RedisClient {
 //            config.setMinEvictableIdleTimeMillis(60000L);
 //            config.setTimeBetweenEvictionRunsMillis(3000L);
 //            config.setNumTestsPerEvictionRun(-1);
-//            jedisPool = new JedisPool(config, redisconf.getRedis_ip(), redisconf.getRedis_port(), 60000);
+//            jedisPool = new JedisPool(config, redisconf.getIp(), redisconf.getPort(), 60000);
 //        }
 //    }
 
@@ -337,7 +337,7 @@ public class RedisClient {
         Jedis jedis = null;
         try {
             jedis = getJedis();
-            //jedis.select(redisconf.getRedis_num());
+            //jedis.select(redisconf.getNum());
             result = jedis.lrange(key, from, to);
         } catch (Exception e) {
             //jedisPool.returnBrokenResource(jedis);
