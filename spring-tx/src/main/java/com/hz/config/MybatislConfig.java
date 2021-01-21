@@ -45,7 +45,7 @@ public class MybatislConfig {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
-        dataSource.setUrl("jdbc:mysql://192.168.20.14:3306/hztest");
+        dataSource.setUrl("jdbc:mysql://xxx.xxx.xxx.xxx:3306/hztest");
         return dataSource;
     }
 
