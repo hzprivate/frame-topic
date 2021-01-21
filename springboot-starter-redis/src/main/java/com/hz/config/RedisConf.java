@@ -1,12 +1,9 @@
 package com.hz.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 /**
  * @author hz
  * @create 2021-01-13
  */
-//@ConfigurationProperties
 public class RedisConf {
 
     private String redis_ip;
