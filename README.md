@@ -1,15 +1,18 @@
-# frame-topic 框架应用源码专题分析
+# frame-topic 框架应用源码专题分析 阅读顺序
 1. aop
 2. aop2
-2. springIoc
-3. mySpring
-4. mySpringFramework
-5. proxyCustom
-6. spring-log
-7. mybatis-frame
-8. simulate-springboot
-9. websocket
-10. observe-design-pattern
-11. springmvc-handlermapping
-12. 
+3. springIoc
+4. myspring
+5. my-springframework
+6. proxy-custom
+7. spring-log
+8. mybatis-frame
+9. simulate-springboot
+10. websocket
+11. observe-design-pattern
+12. springboot-handlermapping
+13. springboot-property
+14. springboot-starter-redis
+15. springboot-redis-demo
+16. spring-tx
 
