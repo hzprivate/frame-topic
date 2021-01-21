@@ -1,4 +1,4 @@
-# maven-proxyCustom
+# maven-proxy-custom
 1. 什么是代理？ 增强一个对象的功能。  
 
 2. 静态代理：
