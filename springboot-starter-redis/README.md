@@ -6,5 +6,5 @@
 3. 在配置文件中名称为ip，port，num中。如果有前缀,例如"prefix=redis" ,就配置 redis.ip,...
 4. 使用案例详情见 springboot-redis-demo
 5. 注意：需提供jar包版本支持 
-    -5.1 spring-boot-starter-web version: 2.0.3.RELEASE (其余版本没做测试,如果使用其余版本有问题，可自行修改源码适配)
-    -5.2 jedis version：2.7.3
+    - 5.1 spring-boot-starter-web version: 2.0.3.RELEASE (其余版本没做测试,如果使用其余版本有问题，可自行修改源码适配)
+    - 5.2 jedis version：2.7.3
