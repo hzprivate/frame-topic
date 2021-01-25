@@ -5,17 +5,17 @@ viewResolver视图解析器，通过视图名称返回对应的视图。最后�
 2. handlerMappings 在dispatcherServlet.properties文件中事先维护，注册到beanFactory工厂
     - 2.1 BeanNameUrlHandlerMapping
     - 2.2 RequestMappingHandlerMapping
-4. 我们用2种方式来注册controller 
+3. 我们用2种方式来注册controller 
     - 3.1 作为bean形式（走BeanNameUrlHandlerMapping） ,
     @Component("/test")以及implements org.springframework.web.servlet.mvc.Controller
     - 3.2 Annotation形式（走 RequestMappingHandlerMapping）
     @Controller
     
-5. 总结：其实我们的SpringMVC关键的概念就在于Handler（处理器） 和Adapter(适配器)
+4. 总结：其实我们的SpringMVC关键的概念就在于Handler（处理器） 和Adapter(适配器)
       通过一个关键的HandlerMappings 找到合适处理你的Controller的Handler 然后再通过HandlerAdapters找到一个
       合适的HandlerAdapter 来执行Handler即Controller里面的逻辑。 最后再返回ModlAndView...
       
-6. 源码解析
+5. 源码解析
     1. 静态块初始化 DispacterServlet.java
     2. tomcat初始化servlet的init方法
     调用 org.springframework.web.servlet.HttpServletBean#initServletBean（servlet 的init）
