@@ -14,7 +14,6 @@ import java.util.*;
 public class SpringbootDiskApplication {
     public static void main(String[] args) {
 
-        getInstanceNames();
 //        AnnotationConfigApplicationContext context
 //                =new AnnotationConfigApplicationContext(AppConfig.class);
     }
