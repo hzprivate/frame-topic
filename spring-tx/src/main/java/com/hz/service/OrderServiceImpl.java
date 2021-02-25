@@ -19,6 +19,6 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     public void insertOrder() {
         orderDao.insertOrder();
-        int i= 1/0;
+//        int i= 1/0;
     }
 }
