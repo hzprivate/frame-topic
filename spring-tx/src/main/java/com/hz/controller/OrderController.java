@@ -1,7 +1,9 @@
 package com.hz.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.hz.aop.TrimStr;
 import com.hz.bean.OrderDTO;
-import com.hz.config.ObjectTrim;
+import com.hz.aop.TrimValidate;
 import com.hz.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +21,12 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
     @RequestMapping("/insertOrder")
-    public String insertOrder(@ObjectTrim OrderDTO orderDTO, HttpServletRequest request){
-         orderService.insertOrder();
-         return "0000";
+    @TrimStr
+    public String insertOrder(@TrimValidate OrderDTO orderDTO, HttpServletRequest request){
+//         orderService.insertOrder();
+
+        String s = JSON.toJSONString(orderDTO);
+        return s;
     }
 
 }
