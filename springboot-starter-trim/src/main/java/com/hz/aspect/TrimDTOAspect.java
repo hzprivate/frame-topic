@@ -1,16 +1,17 @@
 package com.hz.aspect;
 
+
+import com.hz.aop.TrimValidate;
 import com.hz.aop.TrimField;
 import com.hz.aop.TrimType;
-import com.hz.aop.TrimValidate;
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -23,9 +24,9 @@ import java.util.Map;
  * @Description:
  * @create 2021-02-25
  */
-@Component
 @Aspect
-public class DTOTrimAspect {
+@EnableAspectJAutoProxy
+public class TrimDTOAspect {
     //针对 controller包下所有controller方法 进行拦截
 //    @Pointcut("execution(* com.hz.controller.*.*(..))")
 //    public void pointCut() {

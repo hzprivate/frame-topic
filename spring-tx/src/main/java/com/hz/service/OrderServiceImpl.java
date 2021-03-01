@@ -16,7 +16,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     OrderDao orderDao;
     @Override
-    @Transactional
+    @Transactional(propagation= Propagation.REQUIRES_NEW)
     public void insertOrder() {
 //        orderDao.insertOrder();
 //        int i= 1/0;
