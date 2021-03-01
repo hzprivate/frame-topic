@@ -1,23 +1,25 @@
 package com.hz.bean;
 
-import com.hz.config.DTOTrim;
+import com.hz.aop.TrimField;
+import com.hz.aop.TrimType;
 
 /**
  * @author hz
  * @Description:
  * @create 2021-02-25
  */
-
+@TrimType
 public class OrderDTO {
-    @DTOTrim
-    private String orderId;
+//    @TrimField
+    private Integer orderId;
+//    @TrimField
     private String orderName;
 
-    public String getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 

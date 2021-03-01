@@ -18,7 +18,8 @@ public class UserController {
     private UserService userService;
     @RequestMapping("/insertUser")
     public Map insertUserInfo(){
-        return userService.insertUserInfo();
+//        return userService.insertUserInfo();
+        return null;
     }
 
 }
