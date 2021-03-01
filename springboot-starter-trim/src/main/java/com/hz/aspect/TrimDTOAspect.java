@@ -1,16 +1,15 @@
 package com.hz.aspect;
 
 
-import com.hz.aop.TrimValidate;
 import com.hz.aop.TrimField;
 import com.hz.aop.TrimType;
+import com.hz.aop.TrimValidate;
 import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.lang.annotation.Annotation;
@@ -66,7 +65,7 @@ public class TrimDTOAspect {
                         dealWith(entity.getValue());
                     } catch (Exception e) {
                         e.printStackTrace();
-                        LoggerFactory.getLogger("trim").error("trim参数处理错误", e);
+                        throw new RuntimeException();
                     }
                 });
             }
