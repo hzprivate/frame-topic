@@ -24,21 +24,19 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userdao;
     @Override
-    @Transactional(propagation= Propagation.REQUIRES_NEW)
-    public Map insertUserInfo() {
-        //执行正常
+    @Transactional(rollbackFor = Exception.class)
+    public Map insertUserInfo(){
         userdao.insertUser();
+//        int i =1/0;
+        return null;
+    }
 
-        //事务异常
-        try {
-            orderService.insertOrder();
-        } catch (Exception e) {
-            logger.error("sql异常",e);
-        }
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Map insertAll(){
+        insertUserInfo();
+        orderService.selectUser();
 
-        Map map = new HashMap(16);
-        map.put("code","9999");
-        map.put("msg","操作失败");
-        return  map;
+        return null;
     }
 }

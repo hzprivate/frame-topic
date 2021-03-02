@@ -1,5 +1,6 @@
 package com.hz.controller;
 
+import com.hz.service.OrderService;
 import com.hz.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +17,15 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
-    @RequestMapping("/insertUser")
+    @Autowired
+    private OrderService orderService;
+    @RequestMapping("/insert")
     public Map insertUserInfo(){
+        try {
+            userService.insertAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 //        return userService.insertUserInfo();
         return null;
     }

@@ -1,9 +1,8 @@
 package com.hz;
 
-import com.hz.interf.EnableTrimStr;
+import com.nbaisino.interf.EnableRedis;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * @author hz
@@ -11,8 +10,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @create 2021-01-17
  */
 @SpringBootApplication
-//@EnableAspectJAutoProxy
-@EnableTrimStr
+//@EnableTrimStr
+@EnableRedis
 public class SpringTxApplicationRun {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(SpringTxApplicationRun.class);

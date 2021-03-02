@@ -2,5 +2,7 @@ package com.hz.service;
 
 public interface OrderService {
 
-    public void insertOrder();
+    public void updateOrder();
+    public void insertUser();
+    public void selectUser();
 }
