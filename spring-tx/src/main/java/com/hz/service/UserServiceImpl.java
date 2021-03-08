@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,20 +24,27 @@ public class UserServiceImpl implements UserService {
     OrderService orderService;
     @Autowired
     UserDao userdao;
+    @Autowired
+    UserService userService;
+
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Map insertUserInfo(){
-        userdao.insertUser();
-//        int i =1/0;
+        try {
+            userdao.insertUser();
+            int i =1/0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
         return null;
     }
 
     @Override
-    @Transactional(rollbackFor = Exception.class)
     public Map insertAll(){
-        insertUserInfo();
+        userService.insertUserInfo();
         orderService.selectUser();
-
         return null;
     }
 }

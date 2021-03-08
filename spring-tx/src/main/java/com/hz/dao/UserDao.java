@@ -15,4 +15,7 @@ public interface UserDao {
 
     @Select("select * from user where uuid =44 ")
     public Map selectUser();
+
+    @Select("select * from `user` where `name` =#{name} and password=#{password} and sex=#{sex}")
+    public Map selectTestNull(Map map);
 }
