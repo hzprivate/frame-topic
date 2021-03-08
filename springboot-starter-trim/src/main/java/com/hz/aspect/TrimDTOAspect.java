@@ -1,9 +1,9 @@
 package com.hz.aspect;
 
 
-import com.hz.aop.TrimField;
-import com.hz.aop.TrimType;
-import com.hz.aop.TrimValidate;
+import com.hz.annotation.TrimField;
+import com.hz.annotation.TrimType;
+import com.hz.annotation.TrimValidate;
 import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -33,7 +33,7 @@ public class TrimDTOAspect {
 //    }
 
     //针对注解切面拦截
-    @Pointcut("@annotation(com.hz.aop.TrimStr)")
+    @Pointcut("@annotation(com.hz.annotation.TrimStr)")
     public void pointCut() {
 
     }

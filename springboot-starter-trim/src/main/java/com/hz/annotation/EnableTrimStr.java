@@ -1,4 +1,4 @@
-package com.hz.interf;
+package com.hz.annotation;
 
 import com.hz.aspect.TrimDTOAspect;
 import org.springframework.context.annotation.Import;
