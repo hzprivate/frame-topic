@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.hz.springnginx.controller.HelloController,\
+com.hz.springnginx.task.TaskTest
