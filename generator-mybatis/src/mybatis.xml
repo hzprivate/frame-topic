@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE generatorConfiguration
+PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<classPathEntry location="../src/lib/mysql-connector-java-5.1.17.jar" />
+ 
+<context id="DB2Tables" targetRuntime="MyBatis3">
+
+ <commentGenerator>
+  <property name="suppressAllComments" value="true" />
+ </commentGenerator>
+ 
+<!--
+<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+connectionURL="jdbc:oracle:thin:@192.168.1.123:1521:orcl"
+userId="sa"
+password="sa">
+</jdbcConnection>
+
+<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+connectionURL="jdbc:sqlserver://192.168.1.123:1433;databaseName=GovService"
+userId="sa"
+password="meefosa">
+</jdbcConnection>
+-->
+<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+connectionURL="jdbc:mysql://127.0.0.1/hz_test"
+userId="root"
+password="123456">
+</jdbcConnection>
+<javaTypeResolver >
+<property name="forceBigDecimals" value="false" />
+</javaTypeResolver>
+ 
+<javaModelGenerator targetPackage="com.hz.generator.beans" targetProject="../src">
+<property name="enableSubPackages" value="true" />
+<!-- 从数据库返回的值被清理前后的空格 -->
+<property name="trimStrings" value="true" />
+</javaModelGenerator>
+<sqlMapGenerator targetPackage="com.hz.generator.mapper"  targetProject="../src">
+<property name="enableSubPackages" value="true" />
+</sqlMapGenerator>
+<javaClientGenerator type="XMLMAPPER" targetPackage="com.hz.generator.mapper"  targetProject="../src">
+<property name="enableSubPackages" value="true" />
+</javaClientGenerator>
+
+	<!-- <table schema="dbo" tableName="mf_company" domainObjectName="Company" />
+	<table schema="dbo" tableName="mf_shenqing" domainObjectName="ApplicationForm" />
+	<table schema="dbo" tableName="mf_beishenqing" domainObjectName="ApplicationFormDetail" /> -->
+	
+	<!-- <table schema="dbo" tableName="mf_quanxian" domainObjectName="QuanXian" /> -->
+	<!--<table schema="dbo" tableName="mf_wwwsentence_record" domainObjectName="WWWSentenceRecord" />-->
+    <table schema="dbo" tableName="city" domainObjectName="City" />
+</context>
+</generatorConfiguration>
